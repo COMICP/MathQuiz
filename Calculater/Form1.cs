@@ -24,6 +24,8 @@ namespace Calculater
         // This integer variable keeps track of the 
         // remaining time.
         int timeLeft;
+
+
         public void StartTheQuiz()
         {
             addend1 = randomizer.Next(51);
@@ -62,12 +64,18 @@ namespace Calculater
             timeLeft = 30;
             timeLabel.Text = "30 seconds";
             timer1.Start();
+
+            
         }
 
 
         public Form1()
         {
             InitializeComponent();
+            //Adds Date
+            DateTime date = DateTime.Now;
+
+            DateCurrent.Text = "Date: " + date.ToString("dd MMMM yyyy");
         }
 
         private void timeLabel_Click(object sender, EventArgs e)

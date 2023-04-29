@@ -54,6 +54,7 @@
             dividedLeftLabel = new Label();
             startButton = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
+            DateCurrent = new Label();
             ((System.ComponentModel.ISupportInitialize)sum).BeginInit();
             ((System.ComponentModel.ISupportInitialize)difference).BeginInit();
             ((System.ComponentModel.ISupportInitialize)product).BeginInit();
@@ -281,7 +282,7 @@
             // 
             startButton.AutoSize = true;
             startButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            startButton.Location = new Point(148, 291);
+            startButton.Location = new Point(175, 300);
             startButton.Name = "startButton";
             startButton.Size = new Size(133, 35);
             startButton.TabIndex = 0;
@@ -294,11 +295,21 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
+            // DateCurrent
+            // 
+            DateCurrent.AutoSize = true;
+            DateCurrent.Location = new Point(12, 9);
+            DateCurrent.Name = "DateCurrent";
+            DateCurrent.Size = new Size(27, 15);
+            DateCurrent.TabIndex = 21;
+            DateCurrent.Text = "ERR";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(480, 357);
+            Controls.Add(DateCurrent);
             Controls.Add(startButton);
             Controls.Add(quotient);
             Controls.Add(label12);
@@ -362,5 +373,6 @@
         private Label dividedLeftLabel;
         private Button startButton;
         private System.Windows.Forms.Timer timer1;
+        private Label DateCurrent;
     }
 }
